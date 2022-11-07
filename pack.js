@@ -54,10 +54,10 @@ var HarumaToolKit = function () {
                                                         }
                                                         if ((worker == 2)) {
                                                             try {
-                                                                if ((ResourcesGroup[k].resources[m].x == undefined) && (ResourcesGroup[k].resources[m].type == "Image") && (ResourcesGroup[k].resources[m].atlas != true) && (ResourcesGroup[k].resources[m].path != undefined) && (ResourcesGroup[k].resources[m].parent != undefined)) {
+                                                                if ((ResourcesGroup[k].resources[m].x == undefined) && (ResourcesGroup[k].resources[m].type == "Image") && (ResourcesGroup[k].resources[m].atlas != true) && (ResourcesGroup[k].resources[m].path != undefined) && (ResourcesGroup[k].resources[m].parent != undefined) && (ResourcesGroup[k].resources[m].id != undefined) && (ResourcesGroup[k].resources[m].slot != undefined)) {
                                                                     ResourcesGroup[k].resources[m].x = 0;
                                                                 };
-                                                                if ((ResourcesGroup[k].resources[m].y == undefined) && (ResourcesGroup[k].resources[m].type == "Image") && (ResourcesGroup[k].resources[m].atlas != true) && (ResourcesGroup[k].resources[m].path != undefined) && (ResourcesGroup[k].resources[m].parent != undefined)) {
+                                                                if ((ResourcesGroup[k].resources[m].y == undefined) && (ResourcesGroup[k].resources[m].type == "Image") && (ResourcesGroup[k].resources[m].atlas != true) && (ResourcesGroup[k].resources[m].path != undefined) && (ResourcesGroup[k].resources[m].parent != undefined) && (ResourcesGroup[k].resources[m].id != undefined) && (ResourcesGroup[k].resources[m].slot != undefined)) {
                                                                     ResourcesGroup[k].resources[m].y = 0;
                                                                 }
                                                                 if ((ResourcesGroup[k].resources[m].aflags != undefined) && (ResourcesGroup[k].resources[m].type == "Image")) {
@@ -77,6 +77,34 @@ var HarumaToolKit = function () {
                                                                 }
                                                                 if ((ResourcesGroup[k].resources[m]['#comment'] != undefined)) {
                                                                     ResourcesGroup[k].resources[m]['#comment'] = undefined;
+                                                                }
+                                                                try {
+                                                                    if ((ResourcesGroup[k].resources[m].width <0)) {
+                                                                        (ResourcesGroup[k].resources[m].width) = parseInt((ResourcesGroup[k].resources[m].width)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].height <0)) {
+                                                                        (ResourcesGroup[k].resources[m].height) = parseInt((ResourcesGroup[k].resources[m].height)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].ax <0)) {
+                                                                        (ResourcesGroup[k].resources[m].ax) = parseInt((ResourcesGroup[k].resources[m].ax)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].ay <0)) {
+                                                                        (ResourcesGroup[k].resources[m].ay) = parseInt((ResourcesGroup[k].resources[m].ay)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].aw <0)) {
+                                                                        (ResourcesGroup[k].resources[m].aw) = parseInt((ResourcesGroup[k].resources[m].aw)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].ah <0)) {
+                                                                        (ResourcesGroup[k].resources[m].ah) = parseInt((ResourcesGroup[k].resources[m].ah)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].x <0)) {
+                                                                        (ResourcesGroup[k].resources[m].x) = parseInt((ResourcesGroup[k].resources[m].x)*(-1));
+                                                                    };
+                                                                    if ((ResourcesGroup[k].resources[m].y <0)) {
+                                                                        (ResourcesGroup[k].resources[m].y) = parseInt((ResourcesGroup[k].resources[m].y)*(-1));
+                                                                    }
+                                                                } catch (error) {
+                                                                    console.log(error)
                                                                 }
                                                             } catch (error) {
                                                                 console.log(error)
