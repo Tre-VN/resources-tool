@@ -23,6 +23,9 @@ var HarumaToolKit = function () {
                                     })
                                 })
                             }
+                            else{
+                                packResources(filedir, chooseFunc, 0, 0, 0);
+                            }
                         })
                     });
                     var deleteSubgroups = function(formatTexture, ResourcesGroup){
